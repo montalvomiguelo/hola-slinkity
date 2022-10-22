@@ -8,9 +8,12 @@
     "start": "eleventy --serve --incremental",
     "build": "eleventy"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^3.2.41"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "@slinkity/renderer-vue": "^1.0.0",
     "slinkity": "^0.8.0"
   }
 }

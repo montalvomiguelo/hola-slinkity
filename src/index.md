@@ -11,6 +11,8 @@ If you're reading this from your browser... congrats! You just built (or dev ser
 
 With [component shortcodes](https://www.11ty.dev/docs/shortcodes/), you can insert components into any static template that 11ty supports. Just tell us the path to the component and how / if we should <a href="https://slinkity.dev/docs/partial-hydration/">"hydrate" that component with JS</a>, and you're off to the interactivity races.
 
+{% component 'HelloWorld.vue', hydrate='onClientMedia((max-width: 600px))', msg='Counter 1' %}
+
 ## Styling
 
 Did you see that grid background fade into view? Yeah, we think it's pretty cool too. We pulled it off using a few lines of CSS under the `/styles` directory.
@@ -44,3 +46,5 @@ We invite you to head over there and start breaking things! You'll see near-inst
     <li>We leave that <code>.scss</code> extension as-is. Vite scans through our html files for exotic file extensions like this. If it knows how to process an extension, it'll transform that file on-the-fly into something the browser can understand. And if you're looking around for some SCSS plugin we're applying, no need! SCSS support comes out-the-box with Vite. You can also configure your CSS setup of choice by following <a href="https://vitejs.dev/guide/features.html#css">Vite's styling docs.</a></li>
   </ol>
 </details>
+
+{% component 'HelloWorld.vue', hydrate='lazy', msg='Counter 2' %}
